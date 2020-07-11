@@ -1,0 +1,30 @@
+server:
+  port: 8088 # 端口
+  tomcat:
+    uri-encoding: UTF-8
+  servlet:
+    context-path: /api
+spring:
+  messages:
+    encoding: UTF-8
+  datasource:
+    druid:
+    driverClassName: com.mysql.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/jspapp?useUnicode=true&characterEncoding=utf-8
+    username: root
+    password: 123456
+    primary:
+      connection-timeout: 30000
+    hikari:
+      read-only: false
+      connection-timeout: 60000
+      idle-timeout: 60000
+      validation-timeout: 3000
+      max-lifetime: 60000
+      login-timeout: 5
+      maximum-pool-size: 60
+      minimum-idle: 10
+#mybatis:
+#  configuration:
+#    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
